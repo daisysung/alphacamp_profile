@@ -27,7 +27,7 @@ p,ul,ol,li{
 }
 
 /* All sections */
-.container{
+.container {
 	padding-left: 64px;
 	padding-right: 64px;
 }
@@ -156,7 +156,7 @@ h6{
 }
 
 .avatar {
-	width: 100%
+	width: 100%;
 	height: auto;
 }
 
