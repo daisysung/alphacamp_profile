@@ -52,6 +52,8 @@ body{
 #header{
 	height:40px;
   background-color: black;
+  padding-left: 64px;
+  padding-right: 64px;
 	position:fixed;
 	width: 100%;
 	z-index: 1;
@@ -152,7 +154,8 @@ h6{
 }
 
 .col-right{
-	padding-left;
+	padding-left: 40px;
+
 }
 
 .avatar {
