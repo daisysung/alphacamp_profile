@@ -182,6 +182,7 @@ body{
 .summary{
 		display: flex;
 		flex-direction:row;
+		flex-wrap:wrap;
 }
 
 .col-left,
@@ -211,24 +212,28 @@ body{
 .my-services {
 	background-color: #f2f2f2;
 }
+
 .service-items{
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .service-item {
 	width: 400px;
 	padding: 0 40px;
+	text-align: center;
 }
 
 .service-item i {
-	font-size: 20px;
+	font-size: 40px;
 }
 
 /* Resume Section */
 .resume-items {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap:wrap;
 }
 
 .resume-item {
@@ -304,3 +309,104 @@ h3 + .resume-row { /* .row with and h3 before it */
 	padding: 15px 40px;
 	font-size: 1.2em;
 } 
+
+
+/* Porfolio */
+.porfolio {
+	padding-bottom: 0px;
+}
+
+.work-items{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 1200px;
+	margin: auto;
+}
+
+.work-item{
+	position: relative;
+	width: 33.3%;
+	height: 33.3%;
+	padding: 0 20px 40px;
+}
+
+.porfolio-item {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center center;
+
+	transition: all .5s ease;
+}
+
+/*Tablet and mobile */
+
+/* About me section */
+@media screen and (min-width:921px) and (max-width: 1000px ) { 
+	.container {
+		padding: 40px 40px;
+	}
+}
+
+@media screen and ( max-width: 920px ) { 
+  .col-left,
+	.col-right {
+		width:100%;
+	}
+
+	.col-right{
+		padding-left:0;
+		padding-top: 40px;
+	}
+
+	.service-item {
+	width: 100%;
+	margin-top:2.5em;
+	padding: 0;
+	text-align:center;
+	}
+
+	.service-item p{
+		text-align:left;
+	}
+
+	.service-item:first-child{
+		margin-top:0;
+	}
+
+	.service-item i {
+	font-size: 60px;
+	}
+
+	/* Resume */
+	.resume h3 {
+		text-align:left;
+	}
+
+	.resume-item{
+		width: 100%;
+		margin-top: 1em;
+	}
+
+	.row {
+		padding: 40px 0 30px;
+	}
+
+	/* Porfolio 
+	.porforlio-item{
+		padding: 0 5px 20px;
+		width: 400px;
+		height: 400px;
+	} */
+
+} 
+
+@media screen and (max-width:800px) {
+	.porfolio-item {
+		width : 100%;
+		height:auto;
+	}
+}
