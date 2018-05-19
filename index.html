@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<title>Daisy's personal page</title>
 
 </head>
@@ -18,29 +19,36 @@
 	<header id="header" class="clearfix">
 			<nav>
 				<div class="logo">
-					<a href="#">
+					<a href="#header">
 						<img src="images/logo.png" alt="logo" class="logoimage">
 					</a>
 				</div>
-				<ul class="nav clearfix">
-					<li>
-						<a href="#home">Home</a>
-					</li>
-					<li >
-						<a href="#about">About</a>
-					</li>
-					<li>
-						<a href="#service">Service</a>
-					</li>
-					<li>
-						<a href="#porfolio">Porfolio</a>
-					</li>
-					<li>
-						<a href="#contact">Contact</a>
-					</li>
-				</ul>
+				
+				<div class="nav-container">		
+					<button type= "button" class= "menu-button" > 
+    				≡ 
+    			</button>
+    			<input type="checkbox" class="menu-button-checkbox">
+
+					<ul class="nav-list clearfix">
+						<li class="nav-item">
+							<a href="#home">Home</a>
+						</li>
+						<li class="nav-item">
+							<a href="#about">About</a>
+						</li>
+						<li class="nav-item">
+							<a href="#service">Service</a>
+						</li>
+						<li class="nav-item">
+							<a href="#porfolio">Porfolio</a>
+						</li>
+						<li class="nav-item">
+							<a href="#contact">Contact</a>
+						</li>
+					</ul>
+				</div>
 			</nav>
-		</div>
 	</header>
 
 	<!-- Homepage background -->
@@ -59,13 +67,13 @@
 	</section>
 
 <!-- About me -->
-	<section id="about" class="aboutme container">
+	<section id="about" class="aboutme container-fluid">
 		<h3>About me</h3>
-		<div class="summary">
-			<div class ="col-left">
+		<div class="row summary">
+			<div class ="col-md-6">
 				<img src="images/avatar.jpg" alt="image" class="avatar">
 			</div>
-			<div class ="col-right">
+			<div class ="col-md-6 pt-4 pt-md-0">
 				<div class="personal-info">
 					<h4>Daisy</h4>
 					<p> I am a girl. A geeky one. </p>
@@ -74,34 +82,34 @@
 					<p> My skills include </p>	
 				</div>
 				<ul class="skills">
-						<li>HTML</li>
+						<li> HTML</li>
 						<li> CSS </li>
 						<li> JS </li>
 						<li> Baking </li>
 				</ul>
 				<div class="button-group">
-					<a href="#" class="button">Download CV</a>
-					<a href="#contact" class="button">Hire me</a>
+					<a href="#" class="btn btn-primary">Download CV</a>
+					<a href="#contact" class="btn btn-secondary">Hire me</a>
 				</div>
 			</div>
 		</div>
 	</section>
 
 <!-- My services -->
-	<section class ="my-services container" id="service">
+	<section class ="my-services container-fluid" id="service">
 		<h3>My services</h3>
-		<div class="service-items">
-			<div class="service-item">
+		<div class="row service-items">
+			<div class="service-item col-md-4 px-md-4">
 				<i class="fab fa-html5"></i>
 				<h4>Web Design and Development</h4>
 				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras venenatis augue ac nunc sagittis semper. Mauris dui turpis, imperdiet eu volutpat eu, scelerisque sit amet leo. Vivamus viverra purus ut vehicula porta. Phasellus auctor risus ut est dapibus, et vulputate arcu dictum. </p>
 			</div>
-			<div class="service-item">
+			<div class="service-item col-md-4 px-md-4 pt-4 pt-md-0">
 				<i class="fab fa-css3"></i>
 				<h4>Web Design and Development</h4>
 				<p> Fusce volutpat quam a velit dignissim malesuada. Morbi posuere mattis porta. Suspendisse dolor eros, aliquet in ultricies vitae, sagittis vel urna. Cras sit amet dui id nibh aliquet aliquam. Aenean id risus gravida, posuere nulla in, molestie dolor. Quisque et mauris id nibh egestas efficitur. </p>
 			</div>
-			<div class="service-item">
+			<div class="service-item col-md-4 px-md-4 pt-4 pt-md-0">
 				<i class="fas fa-camera-retro"></i>
 				<h4>Web Design and Development</h4>
 				<p> Etiam eget lorem porta, feugiat ipsum at, feugiat nulla. Sed eros libero, vehicula id malesuada a, facilisis a neque. Suspendisse finibus, orci quis semper vestibulum, ipsum diam imperdiet urna, ut tristique sem nunc id elit. Morbi vulputate eleifend lorem, ut semper dui. </p>
@@ -110,13 +118,13 @@
 	</section>
 
 <!-- Resume -->
-	<section class ="resume container">
+	<section class ="resume container-fluid">
 		<h3> Resume </h3>
 
 			<div class="resume-row">
 				<h4>Education</h4>
-				<div class="resume-items">
-					<div class="resume-item">
+				<div class="row resume-items">
+					<div class="resume-item col-lg-6">
 						<h5 class="experience-year">2001 — 2002</h5>
 						<div class="resume-detail">
 							<h6>Computer Science</h6>
@@ -126,7 +134,7 @@
 							</p>
 						</div>
 					</div>
-					<div class="resume-item">
+					<div class="resume-item col-lg-6">
 						<h5 class="experience-year">2002 — 2003</h5>
 						<div class="resume-detail">
 							<h6>Google College</h6>
@@ -141,8 +149,8 @@
 
 			<div class="resume-row">
 				<h4>Experience</h4>
-				<div class="resume-items">
-					<div class="resume-item">
+				<div class="row resume-items">
+					<div class="resume-item col-lg-6">
 						<h5 class="experience-year">2004 — 2005</h5>
 						<div class="resume-detail">
 							<h6>Themeforest Company, Malibug</h6>
@@ -152,7 +160,7 @@
 							</p>
 						</div>
 					</div>
-					<div class="resume-item">
+					<div class="resume-item col-lg-6">
 						<h5 class="experience-year">2005 — 2007</h5>
 						<div class="resume-detail">
 							<h6>Google Company, Australia</h6>
@@ -167,7 +175,7 @@
 	</section>
 
 <!-- Quote -->
-	<section class="quote container">
+	<section class="quote container-fluid">
 		<div class="quote-inner">
 			<h3>Let's work together</h3>
 			<p>I'm available for freelance projects</p>
@@ -200,28 +208,12 @@
 		</div>
 	</section>
 
-<section class="contact container">
-		<h2>Contact me</h2>
-		<form action="" class="form">
-			<div class="input-wrapper input-wrapper_half">
-				<input type="text" name="name" value="" placeholder=" " class="input-floating">
-				<label for="name">Your name</label>
-			</div>
-			<div class="input-wrapper input-wrapper_half">
-				<input type="email" name="email" value="" placeholder=" " class="input-floating">
-				<label for="name">Your email</label>
-			</div>
-			<div class="input-wrapper input-wrapper_full">
-				<textarea name="message" id="" cols="30" rows="10"></textarea>
-				<label for="message">Your message</label>
-			</div>
-			<input type="submit" value="Send message" class="button button-normal">
-		</form>
-	</section>
-
 
 </body>
 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <!--<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;" href="https://unsplash.com/@nicole_smith117?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Nicole Smith"><span style="display:inline-block;padding:2px 3px;"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white;" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px;">Nicole Smith</span></a>-->
 
 </html>

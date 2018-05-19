@@ -27,9 +27,12 @@ p,ul,ol,li{
 }
 
 /* All sections */
-.container {
+.container,
+.container-fluid {
 	padding: 64px 64px;
 }
+
+
 
 section h3{
 	margin: 0 0 1em; /*1em here = 16 px base size * 2.5em font size */
@@ -104,16 +107,17 @@ body{
 	width: auto;
 }
 
-.nav{
-	float:right;
+.nav-list {
+	float: right;
+	transition: all .5s ease;
 }
 
-.nav li{
-	float:left;
-	list-style-type:none;
+.nav-item {
+	float: left;
+	list-style-type: none;
 }
 
-.nav a{
+.nav-list a{
 	display:inline-block;
 	padding:10px;
 	color:#fff;
@@ -121,7 +125,7 @@ body{
 	text-decoration: none;
 }
 
-.nav a:hover{
+.nav-list a:hover{
 	color:#ff9d00;
 }
 
@@ -185,16 +189,6 @@ body{
 		flex-wrap:wrap;
 }
 
-.col-left,
-.col-right{
-	width:50%;
-}
-
-.col-right{
-	padding-left: 40px;
-
-}
-
 .avatar {
 	width: 100%;
 	height: auto;
@@ -213,15 +207,7 @@ body{
 	background-color: #f2f2f2;
 }
 
-.service-items{
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-}
-
 .service-item {
-	width: 400px;
-	padding: 0 40px;
 	text-align: center;
 }
 
@@ -230,15 +216,6 @@ body{
 }
 
 /* Resume Section */
-.resume-items {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap:wrap;
-}
-
-.resume-item {
-	width: 45%;
-}
 
 .experience-year {
 	display: inline-block;
@@ -344,8 +321,76 @@ h3 + .resume-row { /* .row with and h3 before it */
 
 /*Tablet and mobile */
 
-/* About me section */
+@media screen and ( min-width: 1024px) {
+	.menu-button,.menu-button-checkbox {display: none;
+	}
+}
+
+
+@media screen and ( max-width: 1023px ) { 
+  .nav-container { width: auto ; 
+  } 
+
+  .menu-button { 
+		float: right;
+		width: 40px;
+		font-size: 40px; 
+		line-height: 30px; 
+		color: white; 
+		background: transparent; 
+		border: 0; 
+	}
+
+  .menu-button-checkbox {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: auto;
+		right: 40px;
+		margin: 0;
+		opacity: 0;
+		cursor: pointer;
+	}
+
+  .menu-button-checkbox:checked ~ .nav-list {
+   	display:block;
+   	right: 0;
+   }
+  
+  .menu-button-checkbox:checked ~ .menu-button { 
+		color: #ff9d00;
+	}
+
+  .nav-list {
+  	display:none;
+  	margin-top:0;
+  	padding-left:0;
+  	position: fixed;
+  	right:0;
+  	top:40px;
+  	width: 150px;
+  	height:100%;
+  	background:#333;
+  }
+
+  .nav-list li{
+  	border:0;
+  	border-radius:0;
+  }
+
+  .nav-item {
+		float:none;
+		text-align: center;
+	}
+
+	.nav-item a:hover {
+		font color:#ff9d00;
+		font-style: italic;
+	}
+} 
+
 @media screen and (min-width:921px) and (max-width: 1000px ) { 
+/* About me section */
 	.container {
 		padding: 40px 40px;
 	}
@@ -362,12 +407,6 @@ h3 + .resume-row { /* .row with and h3 before it */
 		padding-top: 40px;
 	}
 
-	.service-item {
-	width: 100%;
-	margin-top:2.5em;
-	padding: 0;
-	text-align:center;
-	}
 
 	.service-item p{
 		text-align:left;
@@ -395,14 +434,6 @@ h3 + .resume-row { /* .row with and h3 before it */
 		padding: 40px 0 30px;
 	}
 
-	/* Porfolio 
-	.porforlio-item{
-		padding: 0 5px 20px;
-		width: 400px;
-		height: 400px;
-	} */
-
-} 
 
 @media screen and (max-width:800px) {
 	.porfolio-item {
