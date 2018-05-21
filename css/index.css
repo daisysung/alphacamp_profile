@@ -169,6 +169,11 @@ body{
 	vertical-align: middle;
 }
 
+.social-icon {
+	margin: 1em;
+	color: #fff;
+}
+
 .social_icons a {
 	color:#fff;
 	display:inline-block;
@@ -319,6 +324,13 @@ h3 + .resume-row { /* .row with and h3 before it */
 	transition: all .5s ease;
 }
 
+/* Footer */
+.footer {
+	color: #fff;
+	background: #000;
+	text-align: center;
+}
+
 /*Tablet and mobile */
 
 @media screen and ( min-width: 1024px) {
@@ -346,7 +358,7 @@ h3 + .resume-row { /* .row with and h3 before it */
 		width: 40px;
 		height: 40px;
 		left: auto;
-		right: 40px;
+		right: 64px;
 		margin: 0;
 		opacity: 0;
 		cursor: pointer;
