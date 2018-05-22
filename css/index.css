@@ -123,8 +123,8 @@ body{
 	text-decoration: none;
 }
 
-.nav-link a:active {
-    color: #ff9d00;
+a.nav-link.active {
+	color:#ff9d00;
 }
 
 
