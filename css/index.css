@@ -123,10 +123,9 @@ body{
 	text-decoration: none;
 }
 
-.nav-link a:hover{
-	color:#ff9d00;
+.nav-link a:active {
+    color: #ff9d00;
 }
-
 
 
 /*Homepage Background */
