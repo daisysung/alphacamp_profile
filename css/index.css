@@ -32,8 +32,6 @@ p,ul,ol,li{
 	padding: 64px 64px;
 }
 
-
-
 section h3{
 	margin: 0 0 1em; /*1em here = 16 px base size * 2.5em font size */
 	font-size:2.5em;
@@ -117,7 +115,7 @@ body{
 	list-style-type: none;
 }
 
-.nav-list a{
+.nav-link {
 	display:inline-block;
 	padding:10px;
 	color:#fff;
@@ -125,7 +123,7 @@ body{
 	text-decoration: none;
 }
 
-.nav-list a:hover{
+.nav-link a:hover{
 	color:#ff9d00;
 }
 
