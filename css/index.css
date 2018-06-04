@@ -87,45 +87,25 @@ body{
 /*Header*/
 
 #header{
-	height:40px;
-  background-color: black;
-  padding-left: 64px;
-  padding-right: 64px;
+
 	position:fixed;
 	width: 100%;
 	z-index: 1;
 }
 
-.logo{
-	float:left;
-}
-
-.logoimage{
+.logo-image {
+	display: block;
 	height: 40px;
 	width: auto;
 }
 
-.nav-list {
-	float: right;
-	transition: all .5s ease;
-}
+.nav-list a {
+	display: inline-block;
+	padding: 12px;
+	color: #fff;
 
-.nav-item {
-	float: left;
-	list-style-type: none;
-}
-
-.nav-link {
-	display:inline-block;
-	padding:10px;
-	color:#fff;
-	font-family: 'Pangolin', cursive;
 	text-decoration: none;
-}
-
-a.nav-link.active {
-	color:#ff9d00;
-}
+} 
 
 
 /*Homepage Background */
@@ -202,6 +182,12 @@ a.nav-link.active {
 	margin-bottom: 1em;
 	line-height: 2em;
 	padding-left: 40px;
+}
+
+.carousel-item img {
+    height: 30vw;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* My Services Section */
@@ -291,34 +277,30 @@ h3 + .resume-row { /* .row with and h3 before it */
 
 
 /* Porfolio */
-.porfolio {
-	padding-bottom: 0px;
+.portfolio {
+	padding-bottom: 0;
 }
 
-.work-items{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	max-width: 1200px;
-	margin: auto;
-}
-
-.work-item{
+.work-item {
 	position: relative;
-	width: 33.3%;
-	height: 33.3%;
-	padding: 0 20px 40px;
+	cursor: pointer;
 }
 
 .porfolio-item {
 	position: relative;
 	display: block;
-	width: 100%;
-	height: 100%;
+	max-width: 100%;
+	width: 300px;
+	height: 300px;
 	object-fit: cover;
 	object-position: center center;
 
 	transition: all .5s ease;
+}
+
+.work-item:hover .portfolio-item {
+	margin-top: -10px;
+	box-shadow: 5px 5px 25px rgba(0,0,0,0.25);
 }
 
 /* Footer */
@@ -439,7 +421,7 @@ h3 + .resume-row { /* .row with and h3 before it */
 		margin-top: 1em;
 	}
 
-	.row {
+	.resume-row {
 		padding: 40px 0 30px;
 	}
 

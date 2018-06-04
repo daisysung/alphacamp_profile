@@ -13,24 +13,23 @@
 	<title>Daisy's personal page</title>
 
 </head>
-<body data-spy="scroll" data-target="#navbar-list" data-offset="0">
+<body data-spy="scroll" data-target="#nav-list" data-offset="0">
 
 	<!-- Header -->
-	<header id="header" class="clearfix">
-			<nav>
-				<div class="logo">
-					<a href="#header">
-						<img src="images/logo.png" alt="logo" class="logoimage">
-					</a>
-				</div>
-				
-				<div class="nav-container">		
-					<button type= "button" class= "menu-button" > 
-    				≡ 
-    			</button>
-    			<input type="checkbox" class="menu-button-checkbox">
+	<header id="header">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+				<!-- Logo -->
+				<a class="navbar-brand" href="">
+						<img src="images/logo.png" alt="logo" class="logo-image">
+				</a>
 
-					<ul id="navbar-list" class="nav-list clearfix">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				
+				<div id="navbarSupportedContent" class="collapse navbar-collapse justify-content-end">		
+					
+					<ul id="nav-list" class="navbar-nav">
 						<li class="nav-item">
 							<a class="nav-link" href="#home">Home</a>
 						</li>
@@ -208,23 +207,23 @@
 <!-- Porfolio -->
 	<section class ="porfolio container" id="porfolio">
 		<h3> Latest Works </h3>
-		<div class="work-items">
-			<div class="work-item">
+		<div class="row work-items">
+			<div class="work-item col-md-6 col-lg-4 mb-4" data-toggle="modal" data-target="#imageModal" data-name="1">
 				<img src="images/porfolio-1.jpg" alt="" class="porfolio-item">
 			</div>
-			<div class="work-item">
+			<div class="work-item col-md-6 col-lg-4 mb-4" data-toggle="modal" data-target="#imageModal" data-name="2">
 				<img src="images/porfolio-2.jpg" alt="" class="porfolio-item">
 			</div>
-			<div class="work-item">
+			<div class="work-item col-md-6 col-lg-4 mb-4" data-toggle="modal" data-target="#imageModal" data-name="3">
 				<img src="images/porfolio-3.jpg" alt="" class="porfolio-item">
 			</div>
-			<div class="work-item">
+			<div class="work-item col-md-6 col-lg-4 mb-4" data-toggle="modal" data-target="#imageModal" data-name="4">
 				<img src="images/porfolio-4.jpg" alt="" class="porfolio-item">
 			</div>
-			<div class="work-item">
+			<div class="work-item col-md-6 col-lg-4 mb-4" data-toggle="modal" data-target="#imageModal" data-name="5">
 				<img src="images/porfolio-5.jpg" alt="" class="porfolio-item">
 			</div>
-			<div class="work-item">
+			<div class="work-item col-md-6 col-lg-4 mb-4" data-toggle="modal" data-target="#imageModal" data-name="6">
 				<img src="images/porfolio-6.jpg" alt="" class="porfolio-item">
 			</div>
 		</div>
@@ -236,23 +235,28 @@
 		<form action="" class="row">
 			<div class="form-group col-sm-6">
 				<label for="name">First name:</label>
-				<input type="text" class="form-control" id ="first-name" placeholder="">
+				<input id ="name" type="text" class="form-control" placeholder="">
 			</div>
 			<div class="form-group col-sm-6" >
-				<label for "email">Your email:</label>
+				<label for="email">Your email:</label>
 				<input type ="email" class = "form-control" id="email" placeholder="">
 				<small id = "emailhelp" class="form-text text-muted"> Should be like someone@example.com </small>
 			</div>
+			<div class="form-group col-6">
+    		<label for="colors">Select colors: </label>
+    			<select id="colours" class="form-control" >
+    			</select>
+  		</div>
 			<div class="form-group col-12">
-				<label for "message">Your message:</label>
+				<label for="message">Your message:</label>
 				<textarea id="message" class="form-control" cols="30" rows="10" ></textarea>
+				<small id = "msgError" class="form-text text-danger d-none"> Please write something </small>
 			</div>
 			<div class="form-group col-sm-4">
 				<button type = "submit" class="btn btn-primary">Submit</button>
 				<button type = "reset" class="btn btn-secondary">Reset</button>
 			</div>
 		</form>
-
 	</section>
 
 	<footer class="footer container-fluid py-4">
@@ -265,16 +269,37 @@
 		</div>
 	</footer>
 
+<!-- Modal -->
+	<div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Beautiful image</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Unfortunately, there's no way to display different images in a modal without Javascript</p>
+					<img src="images/porfolio-1.jpg" alt="" class="porfolio-item mx-auto">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </body>
-
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-	
-	</script>
+  
+  <!-- jquery script need to be first -->
+	<script src ="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<!-- bootstrap script comes next as bootstrap uses jS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
 	<script src="js/main.js"></script> 
+
 </html>
 
 
