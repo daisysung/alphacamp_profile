@@ -6,13 +6,16 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Gothic+A1|Montserrat" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Gothic+A1|Montserrat|Pangolin" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- link to external css file -->
+	<link rel="stylesheet" type="text/css" href="css/main.css"> 
+	
 	<title>Daisy's personal page</title>
 
 </head>
+
 <body data-spy="scroll" data-target="#nav-list" data-offset="0">
 
 	<!-- Header -->
@@ -22,7 +25,7 @@
 				<a class="navbar-brand" href="">
 						<img src="images/logo.png" alt="logo" class="logo-image">
 				</a>
-
+				<!-- Nav button -->
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -52,7 +55,7 @@
 
 	<!-- Homepage background -->
 	<section id = "home" class="home_bg">
-		<div class="overlay"></div>
+		<div class="overlay"></div> <!-- overlay with a black @ 50% transparency for background effect -->
 		<div class="container_table" >
 			<div class = "container_table_cell">
 				<h1>Hi, i am Daisy</h1>
@@ -63,12 +66,17 @@
 				</div>
 			</div>
 		</div>
+		<div class="home_scroll">
+					<i class="fas fa-angle-down arrow_one"></i>
+					<i class="fas fa-angle-down arrow_two"></i>
+					<i class="fas fa-angle-down arrow_three"></i>
+		</div>
 	</section>
 
 <!-- About me -->
-	<section id="about" class="aboutme container-fluid">
+	<section id="about" class="container-fluid">
 		<h3>About me</h3>
-		<div class="row summary">
+		<div class="row">
 			<div id="carouselExampleControls" class="carousel slide col-md-6" data-ride="carousel">
   			<div class="carousel-inner">
     			<div class="carousel-item active">
@@ -95,24 +103,19 @@
 			</div>
 			
 			<div class ="col-md-6 pt-4 pt-md-0">
-				<div class="personal-info">
 					<h4>Daisy</h4>
 					<p> I am a girl. A geeky one. </p>
 					<p>	I enjoy being an engineer. I also enjoy being a coder. </p>
 					<p>	This is my very first project. I hope you like it. </p>
 					<p> My skills include </p>	
-				</div>
-				<ul class="skills">
+					<ul class="skills">
 						<li> HTML</li>
 						<li> CSS </li>
 						<li> JS </li>
 						<li> Baking </li>
-				</ul>
-				<div class="button-group">
+					</ul>
 					<a href="#" class="btn btn-primary">Download CV</a>
 					<a href="#contact" class="btn btn-secondary">Hire me</a>
-				</div>
-			</div>
 		</div>
 	</section>
 
@@ -281,7 +284,7 @@
 				</div>
 				<div class="modal-body">
 					<p>Unfortunately, there's no way to display different images in a modal without Javascript</p>
-					<img src="images/porfolio-1.jpg" alt="" class="porfolio-item mx-auto">
+					<img src="images/porfolio-1.jpg" alt="" class="img-fluid mx-auto">
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

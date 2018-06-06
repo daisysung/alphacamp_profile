@@ -19,18 +19,14 @@ $(function(){
   	}
   }
 
-  $('#imageModal').on('show.bs.modal', function (event) {
-  var image = $(event.relatedTarget) // Image that triggered the modal
-  var recipient = image.data('name') // Extract info from data-* attributes
-
-  console.log(recipient);
-  //alert("images/porfolio-"+recipient+".jpg");
-  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-  var modal = $(this)
-  modal.find('.modal-title').text("Image #"+recipient);
-  modal.find('.modal-body img').attr('src',"images/porfolio-"+recipient+".jpg");
-})
+  $('.work-item').on('click', function (event) {
+    let image = $(event.currentTarget).find('img'); // find the image that triggered the modal
+    let imageSource = image.attr('src'); // get the source of the image
+    let imageno = $(event.currentTarget).data('name'); //find data name of the image
+    console.log(imageno);
+    $('.modal-title').text("Image #" + imageno); //display title of image = Image #&data name
+    $('.modal-body img').attr('src', imageSource); // assign the modal source to the image source
+  })
   
   //Ajax call
   $.ajax({
@@ -53,6 +49,32 @@ $(function(){
     $('#colours').on('change', function () {
       $('#message').css('background-color', $('#colours').val() );   
     });
+
+  });
+
+
+let formElement = document.querySelector('form');
+let textElement = document.querySelector('#message');
+let validationMessageElement = document.querySelector('#msgError');
+    
+    formElement.addEventListener('submit', function (event) {
+    // First, prevent the form from submitting
+    event.preventDefault();
+    formElement.classList.remove('invalid');
+
+  //execute function after 10ms
+    window.setTimeout(function () {
+      if (textElement.value === '') {
+        // If the message is empty, make the error visible
+        validationMessageElement.classList.remove('d-none');
+        formElement.classList.add('invalid');
+      } else {
+        // If not empty, hide the error...
+        validationMessageElement.classList.add('d-none');
+        // And submit the form
+        formElement.submit();
+      }
+    }, 10);
 
   });
   /* End of your code */
